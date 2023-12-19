@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="pincode" onkeypress="handlePincode(event)"  onchange="checkvalidationforpincode(event)"/>
+
+    <script>
+
+        function checkvalidationforpincode(event)
+        {
+            if(event.target.value.length <6)
+            {
+                event.target.value = "";
+            }
+
+        }
+
+        function handlePincode(event)
+        {
+            if(event.key>=0 && event.key<=9)
+            {
+                event.returnValue= true;
+            }
+            else
+            {
+                event.returnValue= false;
+            }
+
+            if(event.target.value.length >=6)
+            {
+                event.returnValue = false
+            }
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
