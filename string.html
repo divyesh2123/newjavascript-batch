@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="dispaly" onclick="readMore()"></div>
+    <script>
+
+       let d= "This is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascriptThis is the javascript ";
+
+        let isReadMore= true;
+        function readMore()
+        {
+            if(isReadMore == true)
+            {
+            document.getElementById("dispaly").innerHTML = d.slice(0,20).concat("...readMore");
+
+            }
+            else
+            {
+                document.getElementById("dispaly").innerHTML
+                 = d.concat("readless...");
+            }
+
+            isReadMore = !isReadMore;
+        }
+
+        readMore();
+    </script>
+    
+</body>
+</html>
